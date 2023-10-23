@@ -12,11 +12,11 @@ public class Main {
     if (N == 1)
       return 1;
     else
-      return (josephus(N - 1, K) + K - 1) % N + 1;
+      return (josephus(N - 1, K) + K - 1);
   }
 
   public static void main(String[] args) {
-    int N = 11, k = 4;
+    int N = 11, k = 9;
     String[] names = { "Hasan", "Nima", "Reza", "Amir", "Zahra", "Deniz", "Ali", "Sana", "Mahyar", "Mammad", "Hooman" };
     int ans1 = Josephus(N, k);
     System.out.println("Lucky " + names[ans1] + " :)");
