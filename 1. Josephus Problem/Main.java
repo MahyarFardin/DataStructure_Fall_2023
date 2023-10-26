@@ -12,7 +12,7 @@ public class Main {
     if (N == 1)
       return 1;
     else
-      return (josephus(N - 1, K) + K - 1);
+      return (josephus(N - 1, K) + K - 1) % N + 1;
   }
 
   public static void main(String[] args) {
