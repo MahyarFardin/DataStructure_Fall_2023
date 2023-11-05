@@ -11,16 +11,17 @@ public class Main {
   static int josephus(int N, int K) {
     if (N == 1)
       return 1;
-    else
+    else{
       return (josephus(N - 1, K) + K - 1) % N + 1;
+	  }
   }
 
   public static void main(String[] args) {
-    int N = 11, k = 9;
-    String[] names = { "Hasan", "Nima", "Reza", "Amir", "Zahra", "Deniz", "Ali", "Sana", "Mahyar", "Mammad", "Hooman" };
+    int N = 5, k = 3;
+    String[] names = { "Hasan", "Nima", "Reza", "Amir", "Zahra", "Godrat", "Ali", "Asma", "Mahyar", "Mammad", "Hooman" };
     int ans1 = Josephus(N, k);
     System.out.println("Lucky " + names[ans1] + " :)");
-    int ans2 = Josephus(N, k);
+    int ans2 = josephus(N, k);
     System.out.println("Lucky " + names[ans2] + " :)");
   }
 }
